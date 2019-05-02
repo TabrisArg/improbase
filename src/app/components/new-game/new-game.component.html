@@ -1,0 +1,102 @@
+<div class="create-page">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Create Game</li>
+    </ol>
+  </nav>
+  <div class="page-content">
+
+
+        <form class="create-form" [formGroup]="exampleForm" novalidate (ngSubmit)="onSubmit(exampleForm.value)">
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput placeholder="Title" class="form-control" formControlName="title" [(ngModel)]="title">
+              <button mat-clearButton *ngIf="title" matSuffix mat-icon-button aria-label="Clear" (click)="title=''">
+                  <mat-icon>X</mat-icon>
+                </button>
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validationMessages.title">
+              <mat-error *ngIf="exampleForm.get('title').hasError(validation.type) && (exampleForm.get('title').dirty || exampleForm.get('title').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput placeholder="Type (long form, short form etc...)" class="form-control" formControlName="type"[(ngModel)]="type">
+              <button mat-clearButton *ngIf="type" matSuffix mat-icon-button aria-label="Clear" (click)="type=''">
+                  <mat-icon>X</mat-icon>
+                </button>
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validationMessages.type">
+              <mat-error *ngIf="exampleForm.get('type').hasError(validation.type) && (exampleForm.get('type').dirty || exampleForm.get('type').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+          
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput placeholder="Number of players" class="form-control" formControlName="players" [(ngModel)]="players">
+              <button mat-clearButton *ngIf="players" matSuffix mat-icon-button aria-label="Clear" (click)="players=''">
+                  <mat-icon>X</mat-icon>
+                </button>
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validationMessages.players">
+              <mat-error *ngIf="exampleForm.get('players').hasError(validation.players) && (exampleForm.get('players').dirty || exampleForm.get('players').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput placeholder="category (A. Listening, T.O.Intelligence, Agreement,C. and Support, Commitment, trust or presence)" class="form-control" formControlName="category" [(ngModel)]="category">
+              <button mat-clearButton *ngIf="category" matSuffix mat-icon-button aria-label="Clear" (click)="category=''">
+                  <mat-icon>X</mat-icon>
+                </button>
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validationMessages.category">
+              <mat-error *ngIf="exampleForm.get('category').hasError(validation.category) && (exampleForm.get('category').dirty || exampleForm.get('category').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <textarea matInput placeholder="description" class="form-control" formControlName="description" [(ngModel)]="description">
+              </textarea>
+              <button mat-clearButton *ngIf="description" matSuffix mat-icon-button aria-label="Clear" (click)="description=''">
+                  <mat-icon>X</mat-icon>
+                </button>
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validationMessages.description">
+              <mat-error *ngIf="exampleForm.get('description').hasError(validation.description) && (exampleForm.get('description').dirty || exampleForm.get('description').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <textarea matInput placeholder="Notes" class="form-control" formControlName="notes" [(ngModel)]="notes">
+              </textarea>
+              <button mat-clearButton *ngIf="notes" matSuffix mat-icon-button aria-label="Clear" (click)="notes=''">
+                <mat-icon>X</mat-icon>
+                </button>
+            </mat-form-field>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <textarea matInput placeholder="Variations" class="form-control" formControlName="variations" [(ngModel)]="variations">
+              </textarea>
+              <button mat-clearButton *ngIf="variations" matSuffix mat-icon-button aria-label="Clear" (click)="variations=''">
+                  <mat-icon>X</mat-icon>
+                  </button>
+            </mat-form-field>
+          </div>
+          
+          <div class="row submit-button-container">
+              <button mat-raised-button class="back-button" color="primary" type="submit" (click)="cancel()" >Back</button>
+            <div class="col-md-4">
+                <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!exampleForm.valid">Create</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+</div>

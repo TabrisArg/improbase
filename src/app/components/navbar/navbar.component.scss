@@ -1,0 +1,73 @@
+.navbar {
+    height: 184px;
+    margin-top: 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+
+    .header-image {
+        margin-top: 0em;
+        size: rem;
+    }
+    .links-buttons-box {
+        font-family: 'stoutdeco';
+        .buttons {
+            margin-bottom: 0.9em;
+            margin-top: 4.1em;
+            .login {
+                background: #00CFFF;
+                color: white;
+                font-weight: 500;
+                border-radius: 0.5rem 0rem 0rem 0.5rem;
+                .g-icon {
+                    margin-bottom: 0.2em;
+                }
+            }
+            .logout {
+                background: #00CFFF;
+                color: white;
+                border-radius: 0rem 0.5rem 0.5rem 0rem;
+                font-weight: 500;
+            }
+        }
+        .links{
+            margin-top: 1.3rem;
+            justify-content: space-between;
+            margin-right: 0em;
+            font-size: 17pt;
+            text-decoration: none;
+
+            a:link {
+                color: #005063;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .login-box {
+        .add-game {
+            .plus-sign {
+                margin-top: 6rem;
+                align-self: baseline;
+                margin-left: 3.4rem;
+                cursor: pointer;
+            }
+        }
+        .avatar {
+            border-radius: 50%;
+            align-content: center;
+            width: 8.5rem;
+            height: 8.5rem;
+            box-shadow: 0rem 0.25rem 0.25rem grey;
+        }
+        .user-name {
+            text-align: center;
+            margin-top: 0em;
+            margin-right: 0.5em;
+            font-size: 20pt;
+            overflow: hidden;
+            max-height: 25pt;
+            font-family: 'stoutdeco';
+            color: #005063;
+        }
+    }
+}

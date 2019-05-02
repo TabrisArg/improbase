@@ -1,0 +1,27 @@
+category new game component:
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput placeholder="category" class="form-control" formControlName="category">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validationMessages.category">
+              <mat-error *ngIf="exampleForm.get('category').hasError(validation.category) && (exampleForm.get('category').dirty || exampleForm.get('category').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+
+
+          firebase rules
+
+
+          service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write;
+    }
+  }
+}
+
+
+new firebase rules?
+

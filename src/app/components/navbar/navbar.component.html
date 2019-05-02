@@ -1,0 +1,72 @@
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="row">
+    <!-- Logo -->
+      <div class="col-xs-4 col-sm-4 col-lg-4 logo">
+        <img src="assets/logo_and_tag_x2.png" style="width:100%" alt="Improbase" class="header-image d-flex">
+      </div>
+
+      <!-- Links and buttons-->
+      <div class="col-xs-2 col-sm-2 col-md-5 links-buttons-box d-flex" style="width:100%">
+          <div class="container buttons">
+              <div class="row buttons">
+                  <button type="button" class="btn login" (click)="auth.googleSignin()" style="font-size: large">login with <img class="g-icon" src="assets/icons/google-icon.svg" alt="" height="18pt"></button>
+                  <button type="button" class="btn logout " (click)="auth.signOut()"style="font-size: large">Log out</button>
+              </div>
+<!--
+              <div class="row links navbar-collapse collapse">
+                <a routerLink="/home/principles">The 7 principles</a>
+                <a routerLink="/home/form">On form</a>
+                <a routerLink="/home/info">Useful information</a>
+                <a routerLink="/home/TODO">Something</a>
+              </div>
+-->
+          </div>
+      </div>
+<!-- NO AUTH 
+      <!--Auth-->
+  <div *ngIf="auth.user$ | async; then authenticated else guest" class="d-flex">
+      <!-- template will replace this div -->
+</div>
+<!-- User NOT logged in -->
+<ng-template #guest>
+      <div class="col-xs-5 col-sm-5 col-md-3 d-flex login-box">
+          <div class="row">
+              <div class="col-md-3 add-game">
+                <a routerLink="/new-game" >
+                <img *ngIf="auth.isAdmin" class="plus-sign" src="assets/icons/add_game_vector.svg" alt="add-game" style="height:4.5rem">
+              </a>
+              </div>
+              <div class="col-md-5 avatar-box">
+                <img class="avatar" src="assets/avatar_vector.svg"alt="your avatar" style="width: 136px">
+              </div>
+              <div class="col-md-5 user-name-box">
+              </div>
+
+          </div>
+      </div>
+    </ng-template>
+
+      <!-- User logged in -->
+<ng-template #authenticated>
+        <div *ngIf="auth.user$ | async as user" class="col-xs-5 col-sm-5 col-md-3 login-box">
+            <div class="row">
+                <div class="col-md-3 add-game">
+                  <a routerLink="/new-game" >
+                  <img *ngIf="auth.isAdmin" class="plus-sign" src="assets/icons/add_game_vector.svg" alt="add-game" style="height:4.5rem">
+                </a>
+                </div>
+                <div class="col-md-5 avatar-box">
+                  <img class="avatar" [src]="user.photoURL"alt="your avatar" style="width: 136px">
+                </div>
+                <div class="col-md-5 user-name-box">
+                </div>
+
+            </div>
+        </div>
+  </ng-template>
+
+
+
+  </div>
+</nav>

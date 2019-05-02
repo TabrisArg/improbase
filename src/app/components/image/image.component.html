@@ -1,0 +1,12 @@
+<div>
+  <div class="row">
+    <div class="col-md-12">
+      <h5>Select Image</h5>
+    </div>
+  </div>
+  <div class="d-flex align-content-center flex-wrap">
+    <div *ngFor="let image of images">
+      <img class="img-thumbnail" [src]=image.link (click)= "close(image)">
+    </div>
+  </div>
+</div>

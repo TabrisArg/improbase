@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+<div class="container-fluid home-container">
+
+  <div class="row search-container">
+    <div class="col-sm-12 search-bar ">
+      <div class="row">
+        <div class="col-xs-1 left-edge"></div>
+        <div class="col-xs-10 input">
+            <input type="text" class="form-control input-box" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}" placeholder="Search by title..." (keyup)="searchByTitle()">
+        </div>
+        <div class="col-xs-1 right-edge">
+            <img class="mag-glass mag-glass" src="assets/icons/mag-glass.svg" alt="search">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="list-group games-list">
+    <div *ngFor="let item of items" class="list-group-item list-group-item-action flex-column align-items-start">
+      
+      <div class="row items-cards">
+
+        <div class="col col-md-3 text-col titles">
+          <h3 class="row title">Title: {{item.payload.doc.data().title}}</h3>
+          <h5 class="row players">Players: {{item.payload.doc.data().players}}</h5>
+          <h5 class="row category">Category: {{item.payload.doc.data().category}}</h5>
+        </div>
+
+        <div class="col-md-7 text-col list-description">
+            <p class="mb-1">{{item.payload.doc.data().description}}<p>
+          </div>
+        
+        <div class="col col-md-2 actions-col">
+            <a (click)="viewDetails(item)" >
+              <img *ngIf="auth.isAdmin" class="edit-game-icon edit-game" src="assets/icons/edit-game.svg" alt="edit-game" style="height:5rem">
+            </a>
+            <a (click)="showGame(item)" >
+              <img class="show-game-icon show-game" src="assets/icons/view-game.svg" alt="show-game" style="height:5rem">
+            </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+    <hr>
+
+    <div class="col-sm-12 footer">
+      <div class="row footers">
+      <div class="col-sm-10 ">
+           <p class="email-info font-weight-bold"> <img class="show-game-icon show-game" src="assets/icons/mail.svg" alt="show-game" style="height:1rem"> improbase@googlegroups.com</p>
+      </div>
+      <div class="col-sm-2 copy copyright">
+          <p class="font-weight-bold">Copyright © 2019 improbase</p>
+      </div>
+    </div>
+  </div>
+</div>

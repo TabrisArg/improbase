@@ -1,0 +1,56 @@
+    .back-button {
+        background: #00CFFF;
+        color: white;
+        border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+        font-weight: 500;
+        font-size: 18pt;
+        margin-left: 4em;
+        margin-bottom: 0.5em;
+    }
+.home-container{
+    font-family: merriweather;
+    color: #005063;
+    width: 100rem;
+    margin-left: 5em;
+    .titles {
+        height: 28rem;
+        width: 28.5rem;
+        .title {
+            height: 20rem;
+            background:#D4F8FF;
+            margin-bottom: 1em;
+            border: 2px solid#A7F0FF;
+        }
+        .players {
+            height: 2.98rem;
+            background:#D4F8FF;
+            margin-bottom: 1em;
+            border: 2px solid #A7F0FF;
+        }
+        .type {
+            height: 2.98rem;
+            background:#D4F8FF;
+            border: 2px solid #A7F0FF;
+        }
+    }
+    .description {
+        height: 28rem;
+        width: fit-content;
+        background: #F3FDFF;
+        margin-bottom: 1em;
+        border: 2px solid #A7F0FF;
+    }
+    .notes {
+        height: 14.6875rem;
+        background: #F3FFFA;
+        width: 22.5rem;
+        border: 2px solid #A7F0FF;
+        border-right: 0px;
+    }
+    .variations {
+        height: 14.6875rem;
+        background: #F3FFFA;
+        border: 2px solid #A7F0FF;
+        border-left: 0px;
+    }
+}

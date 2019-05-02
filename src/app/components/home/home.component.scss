@@ -1,0 +1,89 @@
+.home-container{
+}
+.search-container{
+  .search-bar{
+    .left-edge{
+      border-radius: 1em 0em 0em 1em;
+      width: 3rem;
+      height: 2.7rem;
+      margin-left: 5.7em;
+      background: #00CFFF;
+
+    }
+  .input{
+    width: 77.5%;
+    background: #00CFFF;
+    .input-box{
+      margin-top: 0.2em;
+      font-family: 'merriweather';
+    }
+    }
+  .right-edge{
+    background: #00CFFF;
+    width: 3.1rem;
+    border-radius: 0em 1em 1em 0em;
+    .mag-glass {
+      margin-top: 0.2em;
+      margin-left: 0.3em;
+      height: 2.3em;
+    }
+    }
+  }
+}
+
+.games-list {
+  margin-right: 9rem;
+  .list-group-item{
+
+    background: #D4F8FF;
+    border-radius: 1rem;
+    margin-bottom: 1em;
+  }
+    .items-cards{
+
+    }
+    padding: 5em;
+    .items {
+    }
+      .titles {
+        font-family: merriweather;
+        color: #005063;
+        .title {
+          font-weight: 600;
+        }
+      }
+  .list-description {
+    font-family: merriweather;
+    font-weight: 500;
+    border-radius: 1.5rem;;
+    background: #F3FDFF;
+    color: #005063;
+  }
+  .actions-col{
+    padding-top: 1rem;
+    .edit-game {
+      cursor: pointer;
+      margin-right: 1em;
+    }
+    .show-game {
+      cursor: pointer;
+    }
+  }
+
+  .footer {
+    .email-info {
+      font-family: stoutdeco;
+      color: #005063;
+    }
+
+    .mail {
+      height: 2em;
+      align-content: center;
+    }
+    .copyright {
+      font-family: merriweather;
+      color: #005063;
+      background: #000;
+    }
+  }
+}
