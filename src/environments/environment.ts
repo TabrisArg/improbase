@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyDcWmiLMVZP7obzqinDHXhSorHv0TQBkaE',
-    authDomain: 'improbase-ae063.firebaseapp.com',
-    databaseURL: 'https://improbase-ae063.firebaseio.com',
-    projectId: 'improbase-ae063',
-    storageBucket: 'improbase-ae063.appspot.com',
-    messagingSenderId: '58432373621'
+    apiKey: 'your API Key',
+    authDomain: 'your authDomain',
+    databaseURL: 'your database URL',
+    projectId: 'your orijectID',
+    storageBucket: 'your storageBucket',
+    messagingSenderId: 'your messagingSenderId'
   }
 };
 
